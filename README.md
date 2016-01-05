@@ -19,10 +19,10 @@ The tool performs the following
 - check the communication to the target hosts by cheking icmp requests
 - takes as input a protocol name such as http and executes all nse scripts related to that protocol
 - if any vulnerability triggers it saves the output into a log file
-- performs all of the above actions for a range of IP addresses
+- it may perform all of the above actions for a range of IP addresses
 
 If the tool finds a vulnerabilty in a certain protocol it takes a log output which is saved in the following location ```/home/vulnerabilities_enumeration/http_vulnerabilities/http_vulnerabilities/http_vulnerabilities.txt``` 
-In the previous location example the folders have been created using the protocol prefix which in the current occasion is the http protocol. 
+In this example the folders have been created using the protocol prefix which in the current occasion is the http protocol. 
 
 ##Usage: 
 
