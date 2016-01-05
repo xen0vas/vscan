@@ -1,6 +1,6 @@
 # vuln_scan
 
-vulnerability scanner tool using nmap and nse scripts
+vulnerability scanner tool using nmap and nse scripts into vulnerability discovery functionality
 
 This tool puts an additional value into vulnerability scanning with nmap. 
 It uses NSE scripts which can add flexibility in terms of vulnerability detection and exploitation 
