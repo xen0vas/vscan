@@ -33,6 +33,6 @@ In the previous location example the folders have been created using the protoco
 
 ![vuln_scan](https://cloud.githubusercontent.com/assets/12726776/12111385/820089b6-b39d-11e5-9664-ab8f4c0ae417.PNG)
 
-###Slowloris 
+###Example: Slowloris vulnerability detection 
 
 ![slowloris](https://cloud.githubusercontent.com/assets/12726776/12113240/28be284c-b3aa-11e5-99f6-faa19a9ba00f.PNG)
