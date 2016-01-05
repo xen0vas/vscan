@@ -2,7 +2,6 @@
 
 ##################################
 # Vulnerability scanner          #
-# Author Xenofon Vassilakopoulos #
 ##################################
 
 protocol="$2"
@@ -97,3 +96,5 @@ echo "Bye ! " '\n'
 rm ips.txt
 rm file.txt
 rm scanned.txt
+
+#@xvass
