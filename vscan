@@ -9,21 +9,24 @@ port="$3"
 addr_range="$1"
 option="$4"
 
-if [ "$option" != "-Pn" ]; then
+if [ $option = 'Pn' ];then
 
-	if [ $# -eq 1 ];then
-		ip_for_ping=`echo $addr_range | sed 's/\(.*\)\-\(.*\)/\1/'`
-		online=`ping -c 1 $ip_for_ping | grep "bytes" | awk -F" " -v var=$protocol '/bytes/ { print "online" }'`
-	fi
+        if [ $# -eq 1 ];then
+                ip_for_ping=`echo $addr_range | sed 's/\(.*\)\-\(.*\)/\1/'`
+                online=`ping -c 1 $ip_for_ping | grep "bytes" | awk -F" " -v var=$protocol '/bytes/ { print "online" }'`
+        fi
 
-	if [ "$online" = "online" ]; then
-	       	echo "Offline or icmp requests blocking... check connection"
-		exit 1
-	fi
+        if [ "$online" != "online" ]; then
+                echo " "
+                echo "Offline or icmp req blocking... check connection"
+                exit 1
+        fi
 fi
 
-if [ $# != 3 ]; then
+if [ $# != 4 ];then
+if [ $# != 3 ];then
 if [ $# -eq 1 ];then
+
 	if [ $# -eq 2 ];then
 
 		if [ $# != 3 ]; then
@@ -38,6 +41,7 @@ else
 	echo " "
 	echo "[Usage:] ./vuln_scan.sh <ipadress_range> <protocol> <port>"
 	exit 1
+fi
 fi
 fi
 
