@@ -26,7 +26,7 @@ In this example the folders have been created using the protocol prefix which in
 
 ###Usage: 
 
-```[Usage:] ./vscan.sh <ipadress_range> <protocol> <port>```
+```[Usage:] ./vscan.sh <ipadress_range> <protocol> <port> <Pn (optional)>```
 
 ###How to run:
 
