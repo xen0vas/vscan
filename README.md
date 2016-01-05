@@ -12,11 +12,10 @@ Below there are some of the features that NSE scripts provide
 - Backdoor detection
 - Vulnerability exploitation
 
-```This tool uses the path /usr/share/nmap/scripts/ where the nse scripts are located in kali linux``` 
+This tool uses the path ```/usr/share/nmap/scripts/``` where the nse scripts are located in kali linux 
 
-
-```If the tool finds a vulnerabilty in a certain protocol it takes a log output which is saved in the following location /home/vulnerabilities_enumeration/http_vulnerabilities/http_vulnerabilities/http_vulnerabilities.txt 
-In the previous location example the folders have been created using the protocol prefix```
+If the tool finds a vulnerabilty in a certain protocol it takes a log output which is saved in the following location ```/home/vulnerabilities_enumeration/http_vulnerabilities/http_vulnerabilities/http_vulnerabilities.txt``` 
+In the previous location example the folders have been created using the protocol prefix
 
 ##Usage: 
 
