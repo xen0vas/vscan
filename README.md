@@ -13,6 +13,7 @@ Below there are some of the features that NSE scripts provide
 - Vulnerability exploitation
 
 ```This tool uses the path /usr/share/nmap/scripts/ where the nse scripts are located in kali linux``` 
+```If the tool finds a vulnerabilty it takes log which are saved in the following location /home/vulnerabilities_enumeration/http_vulnerabilities/http_vulnerabilities/http_vulnerabilities.txt```
 
 ##Usage: 
 
@@ -32,4 +33,4 @@ Below there are some of the features that NSE scripts provide
 
 ###Slowloris 
 
-![slowloris](https://cloud.githubusercontent.com/assets/12726776/12113152/96cf7fa8-b3a9-11e5-8658-5e3c77df0398.PNG)
+![slowloris](https://cloud.githubusercontent.com/assets/12726776/12113240/28be284c-b3aa-11e5-99f6-faa19a9ba00f.PNG)
