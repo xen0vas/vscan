@@ -12,9 +12,13 @@ Below there are some of the features that NSE scripts provide
 - Backdoor detection
 - Vulnerability exploitation
 
-##Usage 
+##Usage: 
 
 ```[Usage:] ./vscan.sh <ipadress_range> <protocol> <port>```
+
+##example:
+
+```./vscan.sh 192.168.162.90 http 80``` 
 
 ##References :
 - https://nmap.org/book/nse.html
