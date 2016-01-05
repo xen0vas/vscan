@@ -20,6 +20,6 @@ Below there are some of the features that NSE scripts provide
 - https://nmap.org/book/nse.html
 - https://nmap.org/nsedoc/
 
-##Screenshots
+##Screenshots:
 
 ![vuln_scan](https://cloud.githubusercontent.com/assets/12726776/12111385/820089b6-b39d-11e5-9664-ab8f4c0ae417.PNG)
