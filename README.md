@@ -14,7 +14,7 @@ Below there are some of the features that NSE scripts provide
 
 ##usage 
 
-[Usage:] ./vuln_scan.sh <ipadress_range> <protocol> <port>
+```[Usage:] ./vuln_scan.sh <ipadress_range> <protocol> <port>```
 
 ##References :
 - https://nmap.org/book/nse.html
