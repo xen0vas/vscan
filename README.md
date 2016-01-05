@@ -51,6 +51,6 @@ In this example the folders have been created using the protocol prefix which in
 
 ![slowloris](https://cloud.githubusercontent.com/assets/12726776/12113240/28be284c-b3aa-11e5-99f6-faa19a9ba00f.PNG)
 
-##Example: multiple IP scanning SSH 
+##Example: multiple IP scanning SSH weak keys
 
 ![range](https://cloud.githubusercontent.com/assets/12726776/12118359/b1619c32-b3ce-11e5-862c-cc5a85b667d1.PNG)
