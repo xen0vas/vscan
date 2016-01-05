@@ -44,7 +44,7 @@ fi
 if [ "$port" != "NaN" ]; then
 	nmap -v -T5 -Pn $addr_range | awk -F" " -v ps=$port '{ if ($4==ps"/tcp") print $6 }' | sort -n > ips.txt
 else
-	nmap -v -T5 -Pn $addr_range | awk -F" " '{ print $6 }' | sort -n > ips.txt
+	 nmap -v -T5 -Pn $addr_range | awk -F" " '{ if ($1=="Discovered") print $6 }' | sort -n > ips.txt
 fi
 
 ls /usr/share/nmap/scripts | grep "$protocol-.*" > file.txt
