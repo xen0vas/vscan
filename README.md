@@ -1,6 +1,6 @@
 # vscan
 
-vulnerability scanner tool using nmap and nse scripts to find vulnerabilities
+vulnerability scanner tool is using nmap and nse scripts to find vulnerabilities
 
 This tool puts an additional value into vulnerability scanning with nmap. 
 It uses NSE scripts which can add flexibility in terms of vulnerability detection and exploitation.
