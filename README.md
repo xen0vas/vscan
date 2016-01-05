@@ -30,7 +30,11 @@ In this example the folders have been created using the protocol prefix which in
 
 ##example:
 
+1)
 ```./vscan.sh 192.168.162.90 http 80``` 
+
+2)
+```./vscan.sh 192.168.162.10-90 http 80```
 
 ##References :
 - https://nmap.org/book/nse.html
