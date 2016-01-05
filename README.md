@@ -53,3 +53,8 @@ In this example the folders have been created using the protocol prefix which in
 ###Example: multiple IP scanning SSH weak keys
 
 ![range](https://cloud.githubusercontent.com/assets/12726776/12118359/b1619c32-b3ce-11e5-862c-cc5a85b667d1.PNG)
+
+###Example: When the system is down or no ICMP requests 
+
+![block](https://cloud.githubusercontent.com/assets/12726776/12119140/96a23aa6-b3d2-11e5-9348-363ff54700d9.PNG)
+
