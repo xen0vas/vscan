@@ -17,7 +17,7 @@ if [ "$option" != "-Pn" ]; then
 	fi
 
 	if [ "$online" = "online" ]; then
-	       	echo "Offline or icmp req blocking... check connection"
+	       	echo "Offline or icmp requests blocking... check connection"
 		exit 1
 	fi
 fi
