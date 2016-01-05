@@ -12,6 +12,8 @@ Below there are some of the features that NSE scripts provide
 - Backdoor detection
 - Vulnerability exploitation
 
+```This tool uses the path /usr/share/nmap/scripts/ where the nse scripts are located in kali linux``` 
+
 ##Usage: 
 
 ```[Usage:] ./vscan.sh <ipadress_range> <protocol> <port>```
@@ -27,3 +29,7 @@ Below there are some of the features that NSE scripts provide
 ##Screenshots:
 
 ![vuln_scan](https://cloud.githubusercontent.com/assets/12726776/12111385/820089b6-b39d-11e5-9664-ab8f4c0ae417.PNG)
+
+###Slowloris 
+
+![slowloris](https://cloud.githubusercontent.com/assets/12726776/12113152/96cf7fa8-b3a9-11e5-8658-5e3c77df0398.PNG)
