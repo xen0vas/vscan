@@ -44,6 +44,11 @@ In this example the folders have been created using the protocol prefix which in
 
 ![vuln_scan](https://cloud.githubusercontent.com/assets/12726776/12111385/820089b6-b39d-11e5-9664-ab8f4c0ae417.PNG)
 
+
 ###Example: Slowloris vulnerability detection 
 
+
 ![slowloris](https://cloud.githubusercontent.com/assets/12726776/12113240/28be284c-b3aa-11e5-99f6-faa19a9ba00f.PNG)
+
+
+![range](https://cloud.githubusercontent.com/assets/12726776/12118359/b1619c32-b3ce-11e5-862c-cc5a85b667d1.PNG)
