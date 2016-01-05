@@ -25,7 +25,6 @@ fi
 
 if [ $# != 3 ]; then
 if [ $# -eq 1 ];then
-
 	if [ $# -eq 2 ];then
 
 		if [ $# != 3 ]; then
@@ -35,15 +34,11 @@ if [ $# -eq 1 ];then
 	else
 		echo "[Usage:] ./vuln_scan.sh <ipadress_range> <protocol> <port>"
 		exit 1
-
 	fi
-
 else
-
 	echo " "
 	echo "[Usage:] ./vuln_scan.sh <ipadress_range> <protocol> <port>"
 	exit 1
-
 fi
 fi
 
