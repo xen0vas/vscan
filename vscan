@@ -65,9 +65,15 @@ while read line; do
 
 		echo "\033[36m[*] NSE script: $line - Scanning for IP: $ip_address\033[0m"
         	echo "\n"
-		echo "==========================================================================="
-		nmap --script=/usr/share/nmap/scripts/$line $ip_address -p "$port" | sed '/Starting/d' | sed '/Nmap done/d' | sed '/Nmap scan/d'
-		echo "===========================================================================" '\n'
+		if [ "$port" != "NaN" ];then
+                echo "==========================================================================="
+                nmap --script=/usr/share/nmap/scripts/$line $ip_address -p "$port" | sed '/Starting/d' | sed '/Nmap done/d' | sed '/Nmap scan/d'
+                echo "===========================================================================" '\n'
+                else
+                echo "==========================================================================="
+                nmap --script=/usr/share/nmap/scripts/$line $ip_address | sed '/Starting/d' | sed '/Nmap done/d' | sed '/Nmap scan/d'
+                echo "===========================================================================" '\n'
+                fi
 		vul="not vuln"
 		if [ "$port" != "NaN" ];then
 			
