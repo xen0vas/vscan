@@ -1,4 +1,4 @@
-# vuln_scan
+# vscan
 
 vulnerability scanner tool using nmap and nse scripts into vulnerability discovery functionality
 
