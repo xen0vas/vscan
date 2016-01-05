@@ -28,7 +28,7 @@ In this example the folders have been created using the protocol prefix which in
 
 ```[Usage:] ./vscan.sh <ipadress_range> <protocol> <port>```
 
-##example:
+##examples:
 
 1)
 ```./vscan.sh 192.168.162.90 http 80``` 
