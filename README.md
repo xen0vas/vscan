@@ -42,11 +42,11 @@ In this example the folders have been created using the protocol prefix which in
 
 ##Screenshots:
 
-###Example: SMB scanning 
+##Example: SMB scanning 
 ![vuln_scan](https://cloud.githubusercontent.com/assets/12726776/12111385/820089b6-b39d-11e5-9664-ab8f4c0ae417.PNG)
 
 
-###Example: Slowloris vulnerability detection 
+##Example: Slowloris vulnerability detection 
 
 
 ![slowloris](https://cloud.githubusercontent.com/assets/12726776/12113240/28be284c-b3aa-11e5-99f6-faa19a9ba00f.PNG)
