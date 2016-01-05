@@ -76,10 +76,10 @@ while read line; do
 		echo "===========================================================================" '\n'
 		vul="not vuln"
 		if [ "$port" != "NaN" ];then
-			#echo $vul
+			
 			vul=`nmap --script=/usr/share/nmap/scripts/$line $ip_address -p "$port" | awk -F" " '/VULNERABLE/ || /Vulnerable/ { print $2 }' | sed 's/State://' | sed 's/\(^.*\):/\1/'`
 		else
-			#echo $vul
+		
 			vul=`nmap --script=/usr/share/nmap/scripts/$line $ip_address | awk -F" " '/VULNERABLE/ || /Vulnerable/ { print $2 }' | sed 's/State://' | sed 's/\(^.*\):/\1/'`
 		fi
 		if [ $vul = "VULNERABLE" -o $vul = "Vulnerable" ]; then
