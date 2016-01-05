@@ -12,7 +12,7 @@ Below there are some of the features that NSE scripts provide
 - Backdoor detection
 - Vulnerability exploitation
 
-##usage 
+##Usage 
 
 ```[Usage:] ./vuln_scan.sh <ipadress_range> <protocol> <port>```
 
