@@ -21,7 +21,7 @@ The tool performs the following
 - if any vulnerability triggers it saves the output into a log file
 - it may perform all of the above actions for a range of IP addresses
 
-If the tool finds a vulnerabilty in a certain protocol it takes a log output which is saved in the following location ```/home/vulnerabilities_enumeration/http_vulnerabilities/http_vulnerabilities/http_vulnerabilities.txt``` 
+If the tool finds a vulnerabilty in a certain protocol it keeps the output into a log file which is saved in the following location ```/home/vulnerabilities_enumeration/http_vulnerabilities/http_vulnerabilities/http_vulnerabilities.txt``` 
 In this example the folders have been created using the protocol prefix which in the current occasion is the http protocol. 
 
 ##Usage: 
