@@ -1,0 +1,52 @@
+#!/bin/sh
+
+if [ -n "$4" ];then
+online=`ping -c 1 $4 | grep "bytes" | awk -F" " -v var=$2 '/bytes/ { print "online" }'`
+	if [ "$online" = "online" ]; then
+        	echo "Offline check connection"
+		exit 1
+	fi
+fi
+if [ $# -ne 3 ];then 
+	echo "[Usage:] ./vuln_scan.sh <ipadress_range> <protocol> <port>"
+	exit 1
+fi
+nmap -v -T5 -Pn $1 | awk -F" " -v pp=$3 '{ if ($4==pp"/tcp") print $6 }' | sort -n > ips.txt
+protocol="$2"
+port="$3"
+addr_range="$1"
+ls /usr/share/nmap/scripts | grep "$protocol-.*" > file.txt
+echo '\n'
+echo "####################################"
+echo "#     Vulnerability scanner        #" 
+echo "####################################"
+echo '\n'
+while read line; do
+	echo "\033[31m$line\033[0m" '\n'
+
+	while read ip_address;do
+	vul=`nmap -sV -T5 --script=$line $ip_address -p "$port" | awk -F" " '/VULNERABLE/ { print $2 }' | sed 's/State://' | sed 's/\(^.*\):/\1/'`
+
+ 	if [ $vul = "VULNERABLE" ]; then
+
+	  echo "\033[33m$ip_address is Vulnerable to $line\33[0m" '\n'
+
+	  if [ ! -d /home/vulnerabilities_enumeration/"$protocol"_vulnerabilities ]; then
+	         mkdir -p /home/vulnerabilities_enumeration/"$protocol"_vulnerabilities
+	  fi
+
+	echo "$ip_address is Vulnerable to $line" '\n\n' >> /home/vulnerabilities_enumeration/"$protocol"_vulnerabilities/"$protocol"_vulnerabilities.txt
+
+	fi 2>/dev/null
+
+	echo "IP: $ip_address"
+	echo "------------------------" '\n'
+
+	sleep 2
+	done < ips.txt
+	sleep 3
+
+done < file.txt
+
+rm ips.txt
+rm file.txt
