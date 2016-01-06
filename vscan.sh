@@ -11,7 +11,7 @@ port="$3"
 addr_range="$1"
 option="$4"
 
-if [ $option = 'Pn' ];then
+if [ "$option" = 'Pn' ];then
 
        ip_for_ping=`echo $addr_range | sed 's/\(.*\)\-\(.*\)/\1/'`
        online=`ping -c 1 $ip_for_ping | grep "bytes" | awk -F" " -v var=$protocol '/bytes/ { print "online" }'`
