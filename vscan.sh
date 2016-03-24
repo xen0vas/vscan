@@ -58,13 +58,13 @@ if [ "$port" != "NaN" ]; then
 		nmap -v -T5 -Pn $addr_range | awk -F" " -v ps=$port '{ if ($4==ps"/tcp") print $6 }' | sort -n -u -k1 > ips.txt
 	else
  
-		nmap -v -T5 -Pn -iL $addr_range | awk -F" " -v ps=$port '{ if ($4==ps"/tcp") print $6 }' | sort -n > ips.txt
+		nmap -v -T5 -Pn -iL $addr_range | awk -F" " -v ps=$port '{ if ($4==ps"/tcp") print $6 }' | sort -u > ips.txt
 	fi
 else
 	if [ ! -f $addr_range ]; then
 	 	nmap -v -T5 -Pn $addr_range | awk -F" " '{ if ($1=="Discovered") print $6 }' | sort -u -n -k1 > ips.txt
 	else
-		nmap -v -T5 -Pn -iL $addr_range | awk -F" " '{ if ($1=="Discovered") print $6 }' | sort -n > ips.txt
+		nmap -v -T5 -Pn -iL $addr_range | awk -F" " '{ if ($1=="Discovered") print $6 }' | sort -u > ips.txt
 	fi
 fi
 
