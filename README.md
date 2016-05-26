@@ -39,6 +39,9 @@ In this example the folders have been created using the protocol prefix which in
 3)
 ```./vuln_scan.sh 192.168.162.90 ssh 22 Pn```
 
+4)
+```./vscan.sh IPs.txt smp 445 ```
+
 ###References :
 - https://nmap.org/book/nse.html
 - https://nmap.org/nsedoc/
