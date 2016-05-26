@@ -28,6 +28,10 @@ In this example the folders have been created using the protocol prefix which in
 
 ```[Usage:] ./vscan.sh <ipadress_range> <protocol> <port> <Pn (optional)>```
 
+###or:
+
+```[Usage:] ./vscan.sh <ips_file> <protocol> <port> <Pn (optional)>```
+
 ###How to run:
 
 1)
