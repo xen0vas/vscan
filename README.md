@@ -54,7 +54,7 @@ In this example the folders have been created using the protocol prefix which in
 
 ###Screenshots:
 
-###Example: SMB scanning 
+###Red: Example: SMB scanning 
 
 ![vuln_scan](https://cloud.githubusercontent.com/assets/12726776/12111385/820089b6-b39d-11e5-9664-ab8f4c0ae417.PNG)
 
