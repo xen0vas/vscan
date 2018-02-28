@@ -13,8 +13,8 @@
 #       ~~~~        \__\/         \__\/         \__\/         \__\/
 # 
 # 
-# author : Xenofon Vassilakopoulos 
-# 
+# @xvass
+
 
 
 protocol="$2"
