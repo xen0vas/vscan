@@ -84,9 +84,9 @@ touch scanned.txt
 
 while read line; do
 
-	echo "#-------------------------#"
+	echo "#--------------------------------#"
 	echo "\033[31m$line\033[0m"
-	echo "#-------------------------#" '\n'
+	echo "#--------------------------------#" '\n'
 
 	while read ip_address; do
 
