@@ -16,7 +16,9 @@ echo '                                                                      '
 echo '                                                                      ' 
 echo ' VScan - a tool that automates the nmap vulnerability scanner         '
 echo ' Ver. 1.0                                                             '
-echo ' written by: @xvass                                                   ' 
+echo ' written by: @xvass                                                   '
+echo '                                                                      '
+echo 'usage: ./vscan.sh [ipadress_range] [protocol] [port] <Pn (optional)>  ' 
 echo '\n'
 
 
@@ -46,16 +48,16 @@ if [ $# -eq 1 ];then
 	if [ $# -eq 2 ];then
 
 		if [ $# != 3 ]; then
-			echo "[Usage:] ./vscan.sh <ipadress_range> <protocol> <port>"
+			echo 'usage: ./vscan.sh [ipadress_range] [protocol] [port] <Pn (optional)>'
 			exit 1
 		fi
 	else
-		echo "[Usage:] ./vscan.sh <ipadress_range> <protocol> <port>"
+		echo 'usage: ./vscan.sh [ipadress_range] [protocol] [port] <Pn (optional)>'
 		exit 1
 	fi
 else
 	echo " "
-	echo "[Usage:] ./vscan.sh <ipadress_range> <protocol> <port>"
+	echo 'usage: ./vscan.sh [ipadress_range] [protocol] [port] <Pn (optional)>'
 	exit 1
 fi
 fi
@@ -82,9 +84,9 @@ touch scanned.txt
 
 while read line; do
 
-	echo "**************************"
+	echo "#-------------------------#"
 	echo "\033[31m$line\033[0m"
-	echo "**************************" '\n'
+	echo "#-------------------------#" '\n'
 
 	while read ip_address; do
 
