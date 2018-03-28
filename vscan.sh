@@ -18,7 +18,7 @@ echo ' VScan - a tool that automates the nmap vulnerability scanner         '
 echo ' Ver. 1.0                                                             '
 echo ' written by: @xvass                                                   '
 echo '                                                                      '
-echo 'usage: ./vscan.sh [ipadress_range] [protocol] [port] <Pn (optional)>  ' 
+echo ' usage: ./vscan.sh [ipadress_range] [protocol] [port] <Pn (optional)> ' 
 echo '\n'
 
 
