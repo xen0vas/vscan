@@ -24,7 +24,7 @@ The tool performs the following
 If the tool finds a vulnerabilty in a certain protocol (e.g http) it keeps the output into a log file which is created and saved in the following location ```/home/vulnerabilities_enumeration/http_vulnerabilities/http_vulnerabilities/http_vulnerabilities.txt``` 
 In this example the folders have been created using the protocol prefix which in the current occasion is the http protocol. 
 
-###Usage: 
+### Usage: 
 
 ```[Usage:] ./vscan.sh <ip_range> <protocol> <port> <Pn (optional)>```
 
@@ -34,7 +34,7 @@ In this example the folders have been created using the protocol prefix which in
 
 ```[Usage:] ./vscan.sh <ip> <protocol> <port> <Pn (optional)>```
 
-###How to run:
+### How to run:
 
 1)
 ```./vscan.sh 192.168.162.90 http 80``` 
@@ -48,25 +48,25 @@ In this example the folders have been created using the protocol prefix which in
 4)
 ```./vscan.sh IPs.txt smb 445 ```
 
-###References :
+### References :
 - https://nmap.org/book/nse.html
 - https://nmap.org/nsedoc/
 
-###Screenshots:
+### Screenshots:
 
-###Example: SMB scanning 
+### Example: SMB scanning 
 
 ![vuln_scan](https://cloud.githubusercontent.com/assets/12726776/12111385/820089b6-b39d-11e5-9664-ab8f4c0ae417.PNG)
 
-###Example: Slowloris vulnerability detection 
+### Example: Slowloris vulnerability detection 
 
 ![slowloris](https://cloud.githubusercontent.com/assets/12726776/12113240/28be284c-b3aa-11e5-99f6-faa19a9ba00f.PNG)
 
-###Example: multiple IP scanning SSH weak keys
+### Example: multiple IP scanning SSH weak keys
 
 ![range](https://cloud.githubusercontent.com/assets/12726776/12118359/b1619c32-b3ce-11e5-862c-cc5a85b667d1.PNG)
 
-###Example: When the system is down or no ICMP requests 
+### Example: When the system is down or no ICMP requests 
 
 ![block](https://cloud.githubusercontent.com/assets/12726776/12119140/96a23aa6-b3d2-11e5-9348-363ff54700d9.PNG)
 
