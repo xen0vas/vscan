@@ -65,16 +65,16 @@ fi
 
 if [ "$port" != "NaN" ]; then
 	if [ ! -f $addr_range ]; then
-		nmap -v -T5 -Pn $addr_range | awk -F" " -v ps=$port '{ if ($4==ps"/tcp") print $6 }' | sort -n -u -k1 > ips.txt
+		nmap -n -v -T5 -Pn $addr_range | awk -F" " -v ps=$port '{ if ($4==ps"/tcp") print $6 }' | sort -n -u -k1 > ips.txt
 	else
  
-		nmap -v -T5 -Pn -iL $addr_range | awk -F" " -v ps=$port '{ if ($4==ps"/tcp") print $6 }' | sort -u > ips.txt
+		nmap -n -v -T5 -Pn -iL $addr_range | awk -F" " -v ps=$port '{ if ($4==ps"/tcp") print $6 }' | sort -u > ips.txt
 	fi
 else
 	if [ ! -f $addr_range ]; then
-	 	nmap -v -T5 -Pn $addr_range | awk -F" " '{ if ($1=="Discovered") print $6 }' | sort -u -n -k1 > ips.txt
+	 	nmap -n -v -T5 -Pn $addr_range | awk -F" " '{ if ($1=="Discovered") print $6 }' | sort -u -n -k1 > ips.txt
 	else
-		nmap -v -T5 -Pn -iL $addr_range | awk -F" " '{ if ($1=="Discovered") print $6 }' | sort -u > ips.txt
+		nmap -n -v -T5 -Pn -iL $addr_range | awk -F" " '{ if ($1=="Discovered") print $6 }' | sort -u > ips.txt
 	fi
 fi
 
@@ -94,20 +94,20 @@ while read line; do
         	echo "\n"
 		if [ "$port" != "NaN" ];then
                 	echo "==========================================================================="
-                	nmap --script=/usr/share/nmap/scripts/$line $ip_address -p "$port" | sed '/Starting/d' | sed '/Nmap done/d' | sed '/Nmap scan/d'
+                	nmap -n --script=/usr/share/nmap/scripts/$line $ip_address -p "$port" | sed '/Starting/d' | sed '/Nmap done/d' | sed '/Nmap scan/d'
                 	echo "===========================================================================" '\n'
                 else
                 	echo "==========================================================================="
-                	nmap --script=/usr/share/nmap/scripts/$line $ip_address | sed '/Starting/d' | sed '/Nmap done/d' | sed '/Nmap scan/d'
+                	nmap -n --script=/usr/share/nmap/scripts/$line $ip_address | sed '/Starting/d' | sed '/Nmap done/d' | sed '/Nmap scan/d'
                 	echo "===========================================================================" '\n'
                 fi
 
 		vul="not vuln"
 
 		if [ "$port" != "NaN" ];then
-			vul=`nmap --script=/usr/share/nmap/scripts/$line $ip_address -p "$port" | awk -F" " '/VULNERABLE/ || /Vulnerable/ { print $2 }' | sed 's/State://' | sed 's/\(^.*\):/\1/'`
+			vul=`nmap -n --script=/usr/share/nmap/scripts/$line $ip_address -p "$port" | awk -F" " '/VULNERABLE/ || /Vulnerable/ { print $2 }' | sed 's/State://' | sed 's/\(^.*\):/\1/'`
 		else
-			vul=`nmap --script=/usr/share/nmap/scripts/$line $ip_address | awk -F" " '/VULNERABLE/ || /Vulnerable/ { print $2 }' | sed 's/State://' | sed 's/\(^.*\):/\1/'`
+			vul=`nmap -n --script=/usr/share/nmap/scripts/$line $ip_address | awk -F" " '/VULNERABLE/ || /Vulnerable/ { print $2 }' | sed 's/State://' | sed 's/\(^.*\):/\1/'`
 		fi
 
 		if [ $vul = "VULNERABLE" -o $vul = "Vulnerable" ]; then
